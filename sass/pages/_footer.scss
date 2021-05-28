@@ -1,0 +1,48 @@
+.form {
+  &__input {
+    outline: 0;
+    border: 0;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    &::-webkit-input-placeholder {
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+      font-size: 2rem !important;
+      text-transform: capitalize;
+      color: #777777;
+    }
+  }
+  &__btn {
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    color: $modal-bg;
+    background-color: $text-color-primary;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2.4rem 3.2rem;
+    border-radius: 1rem;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    position: relative;
+    border: 3px solid $off-white;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+  &__group {
+    @extend %strack-horizontal;
+    gap: 4rem;
+    @include respond(phone) {
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    & > * {
+      flex-basis: 100%;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.team {
+  &__container {
+    display: flex;
+    gap: 3rem;
+    @include respond(phone) {
+      flex-wrap: wrap;
+      width: 70%;
+      gap: 5rem;
+    }
+  }
+  &__content {
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(26, 47, 51, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Playfair Display", serif;
+  }
+  &__figure {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+  &__data {
+    padding: 2rem 1rem;
+  }
+  &__heading {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  &__position {
+    font-size: 2rem;
+  }
+  &__social-container {
+    margin-top: -4rem;
+  }
+  &__social-list {
+    display: flex;
+    justify-content: center;
+  }
+  &__social-item {
+    padding: 2rem;
+  }
+  &__social-link {
+    font-size: 2.5rem;
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+}

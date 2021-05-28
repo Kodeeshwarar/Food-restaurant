@@ -1,0 +1,110 @@
+.section-home {
+  position: relative;
+  overflow: hidden;
+  padding: 9rem 0;
+  @include respond(phone-min) {
+    height: 88vh;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(/img/banner-1.jpg);
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.5);
+    z-index: -1;
+  }
+}
+.home {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    @include respond(phone) {
+    }
+  }
+  &__content {
+    color: $text-color-secondary;
+    @media only screen and (max-width: 700px) {
+      padding: 2rem 0;
+      width: 100%;
+      top: -10%;
+      left: 30px;
+      position: relative;
+    }
+  }
+  &__title {
+    color: #fff;
+    opacity: 0.95;
+    text-transform: uppercase;
+    @extend %heading;
+    font-size: 4.4rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  &__subtitle {
+    position: relative;
+    @extend %heading;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    opacity: 0.9;
+    left: 3rem;
+  }
+  &__desc {
+    @extend %heading;
+    font-size: 1.7rem;
+    letter-spacing: 2.5px;
+    color: inherit;
+    font-weight: 400;
+  }
+  &__btns {
+    display: flex;
+    margin-top: 4rem;
+    @media only screen and (max-width: 700px) {
+      margin-top: 2rem;
+    }
+  }
+}
+.home__btn {
+  font-size: 1.4rem;
+  color: $off-white;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2.4rem 3.2rem;
+  border-radius: 1rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  border: 3px solid $off-white;
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  &:active {
+    transform: translateY(2rem);
+  }
+  &:hover {
+    transform: translateY(-1rem);
+  }
+  &:focus-within,
+  &:focus {
+    border: 1px solid black;
+  }
+
+  &:not(:nth-child(1)) {
+    margin-left: 3rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    font-size: 1.5rem !important;
+    padding: 1.7rem 2.2rem;
+  }
+}

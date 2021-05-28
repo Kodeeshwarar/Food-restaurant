@@ -1,0 +1,48 @@
+.btn {
+  &,
+  &:visited,
+  &:link {
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    color: $off-white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2.4rem 3.2rem;
+    border-radius: 1rem;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    position: relative;
+    border: 3px solid $off-white;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    @include respond(phone) {
+      padding: 2.4rem 2.2rem;
+    }
+  }
+  &:active {
+    transform: translateY(-1px);
+  }
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:focus-within,
+  &:focus {
+    border: 1px solid black;
+  }
+  //   &-primary {
+  &-primary {
+    background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+  }
+  //   }
+  &-ghost {
+    background-color: none;
+    border: 3px solid $off-white;
+    &:hover,
+    &:active {
+      background-color: $modal-bg;
+      color: $text-color-primary;
+    }
+  }
+}
