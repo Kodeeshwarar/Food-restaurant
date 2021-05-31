@@ -26,7 +26,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 6rem;
-    @include respond(phone) {
+    @include respond(tab-port) {
       grid-template-columns: 1fr;
     }
   }
@@ -39,18 +39,38 @@
     display: flex;
     align-items: center;
     gap: 4rem;
+    @include respond(phone) {
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
 
     img {
       width: 150px;
       transition: all 0.2s;
-      &:hover {
-        transform: scale(1.4);
+      border-radius: 3px;
+      @include respond(phone) {
+        width: 80%;
+        height: 25rem;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+      @include respond(tab-port-min) {
+        &:hover {
+          transform: scale(1.4);
+        }
       }
     }
   }
   &__text-box {
     @include respond(tab-port) {
       line-height: 1.8;
+    }
+    @include respond(phone) {
+      max-width: 82%;
     }
     h3 {
       font-size: 2.2rem;
@@ -65,5 +85,18 @@
     font-size: 3rem;
     margin-left: auto;
     margin-right: auto;
+    display: inline-block;
+    background-color: $color-primary;
+    color: #fff;
+    padding: 0.5rem 4rem;
+    box-shadow: 0 1rem 1.5rem hsla(150, 50%, 30%, 0.342);
+    transition: all 0.2s;
+    @include respond(phone) {
+      text-align: center;
+      width: 70%;
+    }
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 }

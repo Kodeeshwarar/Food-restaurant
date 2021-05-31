@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 6rem;
-    @include respond(phone) {
+    @include respond(tab-port) {
       grid-template-columns: 1fr;
     }
   }
@@ -23,7 +23,7 @@
     }
   }
   &__date {
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: #fff;
   }

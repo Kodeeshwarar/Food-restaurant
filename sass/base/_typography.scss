@@ -2,7 +2,6 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-
 .heading__subtitle {
   position: relative;
   @extend %heading;
@@ -54,4 +53,11 @@
   letter-spacing: 2.5px;
   color: inherit;
   margin: 0 auto;
+  width: auto;
+  @include respond(tab-port) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+  }
 }
