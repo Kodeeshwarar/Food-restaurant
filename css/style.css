@@ -633,7 +633,7 @@ html {
 .section-home::before {
   content: "";
   position: absolute;
-  background-image: url(./img/banner-1.jpg);
+  background-image: url(../img/banner-1.jpg);
   object-fit: cover;
   left: 0;
   top: 0;
